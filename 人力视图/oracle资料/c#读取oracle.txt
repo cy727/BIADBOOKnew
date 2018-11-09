@@ -1,0 +1,42 @@
+由于工作需要，现需要从远程Oracle数据库获取数据。本人开始以为可以直接远程，试了下竟然不行，提示“System.Data.OracleClient 需要 Oracle 客户端软件 8.1.7 或更高版本。”。公司的要求就是不装客户端，没法子只好找找看有没有其他方案。
+Instant Oracle
+运气不错，还真找到一可用方案，就是Instant Oracle。
+关于Instant Oracle的介绍请看http://www.oracle.com/technetwork/database/features/oci/index.html。
+下载Instant Oracle
+Instant Oracle的下载地址：http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html。
+我选择了Version 10.2.0.5的Basic包，33.2M。至于其他的Basic Lite、JDBC Supplement、SQL*Plus、SDK和ODBC包，有兴趣的朋友可以自行研究。
+
+安装Instant Oracle
+其实不需要安装，解压就可以了。
+然后在新建一记事本，重命名为tnsnames.ora，打开后输入配置内容。将HOST、PORT、SERVICE_NAME改为自己的内容，至于第一行的orcl是与登录的时候有关，写成abc什么的都可以，不过登录时的Database也得填abc。
+orcl =
+(DESCRIPTION =
+(ADDRESS_LIST =
+(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.0.60)(PORT = 1521))
+)
+(CONNECT_DATA =
+(SERVICE_NAME = orcl)
+)
+)
+
+远程连接Oracle
+
+OCI Instant Client Data Shared Library
+oraociei10.dll (Basic version)
+Client Code Library
+oci.dll
+Security Library
+orannzsbb10.dll
+OCCI Library
+oraocci10.dll
+
+引用System.Data.OracleClient。
+拷贝oci.dll、orannzsbb10.dll、oraocci10.dll、oraociei10.dll
+
+You need this solution if you have more than one application, instead of copying the dll files in each one do the following:-
+- Copy the 4 dll files + ociw32.dll to: WINDOWS\system32 directory
+- Create the folder: WINDOWS\system32\network\admin and locate the tnsnames.ora inside that folder
+Now you don't need to copy the dll files to each application directory.
+In addition, if your application has a crystal report it will run.
+
+远程连接字符串，请改为自己的：Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.60)(PORT=1521))(CONNECT_DATA=(SID=orcl)));User Id=yourUID;Password=yourPWD;

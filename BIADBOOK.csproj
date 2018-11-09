@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D287565-852E-4CE7-8254-6FB6C241E3E5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>itConsume.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BIADBOOK</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BIADBOOK</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlienRFID1">
+      <Name>AlienRFID1</Name>
+      <HintPath>bin\AlienRFID1.dll</HintPath>
+    </Reference>
+    <Reference Include="AlienSS1">
+      <Name>AlienSS1</Name>
+      <HintPath>bin\AlienSS1.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.MSCommLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\AxInterop.MSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSCommLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>obj\Interop.MSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="numerictextbox">
+      <Name>numerictextbox</Name>
+      <HintPath>o:\numerictextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookquery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsformBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsformBook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCountL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookListInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookLocationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReaderSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateBookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintRepairCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryRFIDBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReaderTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="itConsume.ico" />
+    <Content Include="oci.dll" />
+    <Content Include="ociw32.dll" />
+    <Content Include="oraocci11.dll" />
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book.resx">
+      <DependentUpon>book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookList.resx">
+      <DependentUpon>BookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookquery.resx">
+      <DependentUpon>bookquery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBook.resx">
+      <DependentUpon>FormBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBor.resx">
+      <DependentUpon>FormBor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCount.resx">
+      <DependentUpon>FormCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCountL.resx">
+      <DependentUpon>FormCountL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQue.resx">
+      <DependentUpon>FormQue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookListInfo.resx">
+      <DependentUpon>frmBookListInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookLocationManager.resx">
+      <DependentUpon>frmBookLocationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReaderSetting.resx">
+      <DependentUpon>frmReaderSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateBookList.resx">
+      <DependentUpon>frmUpdateBookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintBarCode.resx">
+      <DependentUpon>PrintBarCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRepairCode.resx">
+      <DependentUpon>PrintRepairCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryRFIDBook.resx">
+      <DependentUpon>QueryRFIDBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReaderTag.resx">
+      <DependentUpon>ReaderTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="App.ico" />
+    <Content Include="dsBook.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBook.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="dsformBook.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsformBook.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="fc32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

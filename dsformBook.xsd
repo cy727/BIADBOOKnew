@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsformBook" targetNamespace="http://www.tempuri.org/dsformBook.xsd" xmlns:mstns="http://www.tempuri.org/dsformBook.xsd" xmlns="http://www.tempuri.org/dsformBook.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsformBook" msdata:IsDataSet="true" msdata:Locale="zh-CN">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="book">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="书名" type="xs:string" minOccurs="0" />
+              <xs:element name="并列提名" type="xs:string" minOccurs="0" />
+              <xs:element name="副提名" type="xs:string" minOccurs="0" />
+              <xs:element name="并列副提名" type="xs:string" minOccurs="0" />
+              <xs:element name="国别" type="xs:string" minOccurs="0" />
+              <xs:element name="第一责任者" type="xs:string" minOccurs="0" />
+              <xs:element name="其他责任者" type="xs:string" minOccurs="0" />
+              <xs:element name="版本" type="xs:string" minOccurs="0" />
+              <xs:element name="有关责任者" type="xs:string" minOccurs="0" />
+              <xs:element name="出版地" type="xs:string" minOccurs="0" />
+              <xs:element name="出版者" type="xs:string" minOccurs="0" />
+              <xs:element name="出版日期" type="xs:string" minOccurs="0" />
+              <xs:element name="页数" type="xs:string" minOccurs="0" />
+              <xs:element name="开本" type="xs:string" minOccurs="0" />
+              <xs:element name="附图" type="xs:string" minOccurs="0" />
+              <xs:element name="附件" type="xs:string" minOccurs="0" />
+              <xs:element name="价格" type="xs:string" minOccurs="0" />
+              <xs:element name="附注" type="xs:string" minOccurs="0" />
+              <xs:element name="文种号" type="xs:string" minOccurs="0" />
+              <xs:element name="图书分类号" type="xs:string" minOccurs="0" />
+              <xs:element name="种次号" type="xs:string" minOccurs="0" />
+              <xs:element name="年代顺序号" type="xs:string" minOccurs="0" />
+              <xs:element name="入库日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="馆藏量" type="xs:double" minOccurs="0" />
+              <xs:element name="借出书量" type="xs:double" minOccurs="0" />
+              <xs:element name="借出次数" type="xs:double" minOccurs="0" />
+              <xs:element name="拒借次数" type="xs:double" minOccurs="0" />
+              <xs:element name="拒借标记" type="xs:boolean" />
+              <xs:element name="有效规范" type="xs:boolean" minOccurs="0" />
+              <xs:element name="失效规范" type="xs:boolean" minOccurs="0" />
+              <xs:element name="指针" type="xs:double" minOccurs="0" />
+              <xs:element name="内容提要" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

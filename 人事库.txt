@@ -1,0 +1,6 @@
+
+select v_sys_psn.psncode, v_sys_psn.psnname, v_sys_dept.first_deptname, v_sys_dept.second_deptname, v_sys_dept.third_deptname, v_sys_psn.mobile, v_sys_psn.officephone, v_sys_corp.UNITNAME from v_sys_psn LEFT OUTER JOIN V_SYS_DEPT ON v_sys_psn.pk_deptdoc = v_sys_dept.pk_fourtdept  LEFT OUTER JOIN v_sys_corp ON v_sys_psn.PK_CORP=v_sys_corp.PK_CORP
+
+select v_sys_psn.psncode, v_sys_psn.psnname, v_sys_dept.first_deptname, v_sys_dept.second_deptname, v_sys_dept.third_deptname, v_sys_psn.mobile, v_sys_psn.officephone, v_sys_corp.UNITNAME from v_sys_psn LEFT OUTER JOIN V_SYS_DEPT ON v_sys_psn.pk_deptdoc = v_sys_dept.pk_fourtdept  LEFT OUTER JOIN v_sys_corp ON v_sys_psn.PK_CORP=v_sys_corp.PK_CORP where v_sys_psn.psnname='徐'
+
+select v_sys_psn.psncode, v_sys_psn.psnname, v_sys_dept.first_deptname, v_sys_dept.second_deptname, v_sys_dept.third_deptname, v_sys_psn.mobile, v_sys_psn.officephone, v_sys_corp.UNITNAME from v_sys_psn LEFT OUTER JOIN V_SYS_DEPT ON v_sys_psn.pk_deptdoc = v_sys_dept.pk_fourtdept  LEFT OUTER JOIN v_sys_corp ON v_sys_psn.PK_CORP=v_sys_corp.PK_CORP where v_sys_dept.second_deptname='党群工作部'

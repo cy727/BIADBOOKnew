@@ -1,0 +1,41 @@
+Windows下的安装（occi）
+下载适用于平台的相应 Instant Client 程序包。所有安装都要求 Basic 程序包。由于需要进行开发，还需要下载sdk包；
+将程序包解压缩到单个目录，如"E:/instantclient_11_2"。
+在环境中设置库加载路径，使其指向第 2 步中确定的目录（"E:/instantclient_11_2"）。在许多 UNIX 平台上，LD_LIBRARY_PATH 为相应的环境变量。在 Windows 上，应当使用 PATH。
+创建一个名为"tnsnames.ora"，放到刚才的解压目录下（"E:/instantclient_11_2"）。其中这个文件的内容为：
+# 文件 tnsnames.ora
+
+ORACLE =
+
+(DESCRIPTION =
+
+(ADDRESS_LIST =
+
+(ADDRESS = (PROTOCOL = TCP)(HOST = 10.6.0.46)(PORT = 1521))
+
+)
+
+(CONNECT_DATA =
+
+(SERVER = DEDICATED)
+
+(SERVICE_NAME = Oracle10.6.0.46)
+
+)
+
+)
+
+# 其中红线加粗的三个地方需要根据自己的实际情况进行更改
+
+# ORACLE —— 远程数据库的连接字符串
+
+#10.6.0.46 —— 远程数据库所在机器IP
+
+# Oracle10.6.0.46 ——远程数据库名称
+
+添加系统变量。变量的值就是文件解压的目录（E:/instantclient_11_2 ）。
+ORACLE_HOEM= E:/instantclient_11_2(可选)
+
+ TNS_ADMIN = E:/instantclient_11_2
+
+NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK //避免乱码

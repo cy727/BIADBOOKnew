@@ -1,0 +1,74 @@
+(二)PL/SQL Developer的使用：
+安装PL/SQL Developer后，启动时取消登录，进入界面，在tools - Preferences...中，设置两个输入框：
+Oracle Home：C:\OracleInstantClient_11_2
+OCI library: C:\OracleInstantClient_11_2\oci.dll
+然后，如果tnsnames.ora文件直接放在C:\OracleInstantClient_11_2下，需要设置环境变量TNS_ADMIN=C:\OracleInstantClient_11_2；
+如果在C:\OracleInstantClient_11_2下建立network\admin目录，并且放入tnsnames.ora文件，则可以忽略TNS_ADMIN变量。
+(三)Toad的使用：
+（1）建立新目录：
+在C:\OracleInstantClient_11_2下建立network\admin目录。
+（2）在network\admin目录下建立tnsnames.ora文件（或者拷贝一个），该文件配置了你要连接的数据库；
+（3）建立环境变量：
+TNS_ADMIN=C:\OracleInstantClient_11_2\network\admin（必须）
+PATH=%PATH%;C:\OracleInstantClient_11_2（必须）
+ORACLE_HOME=C:\OracleInstantClient_11_2（必须）
+LD_LIBRARY_PATH=C:\OracleInstantClient_11_2（必须）
+SQLPATH=C:\OracleInstantClient_11_2（可选）
+NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK（可选）
+
+
+
+
+
+ 今天，有同事要安装PLSQL Developer，装完oralce client后，目录下面没有network/admin，原来是选择了instant 安装（自己向来是完全安装，没注意过这个）。查了一下，转载下面的文章。
+【转】 Oracle instant client在windows下的安装和使用
+转载自 placidcreate
+最终编辑 placidcreate
+【安装】从oracle官方网站下载instant client文件，一般来说，有basic、sqlplus、odbc、jdbc，就足够用的了：
+instantclient-basic-win32-11.2.0.1.0.zip
+instantclient-sqlplus-win32-11.2.0.1.0.zip
+instantclient-odbc-win32-11.2.0.1.0.zip
+instantclient-jdbc-win32-11.2.0.1.0.zip
+将上述zip文件解压到同一个目录下，便于查找和使用，如：C:\OracleInstantClient_11_2。
+【配置和使用】
+假定oracle instant client安装（解压）的目录是：C:\OracleInstantClient_11_2
+(一)SQLPLUS的使用：
+（1）直接使用：运行cmd到命令行控制台，在C:\OracleInstantClient_11_2目录下输入命令：
+sqlplus j2ee/j2ee@//10.10.10.1:1521/ora10
+格式：sqlplus user/passwd@//IP地址:端口号/SID or SERVICE_NAME
+（2）使用别名：
+在C:\OracleInstantClient_11_2目录下，建立一个tnsnames.ora文件，包含（示例）：
+ORA10 =
+(DESCRIPTION =
+   (ADDRESS_LIST =
+     (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.10.1)(PORT = 1521))
+   )
+   (CONNECT_DATA =
+     (SERVICE_NAME = ora10)
+   )
+)
+这样：sqlplus j2ee/j2ee@ora10，即可。
+如果不是在C:\OracleInstantClient_11_2目录下，需要指定：
+set PATH=C:\OracleInstantClient_11_2;%PATH%
+set TNS_ADMIN=C:\OracleInstantClient_11_2
+(二)PL/SQL Developer的使用：
+安装PL/SQL Developer后，启动时取消登录，进入界面，在tools - Preferences...中，设置两个输入框：
+Oracle Home：C:\OracleInstantClient_11_2
+OCI library: C:\OracleInstantClient_11_2\oci.dll
+然后，如果tnsnames.ora文件直接放在C:\OracleInstantClient_11_2下，需要设置环境变量TNS_ADMIN=C:\OracleInstantClient_11_2；
+如果在C:\OracleInstantClient_11_2下建立network\admin目录，并且放入tnsnames.ora文件，则可以忽略TNS_ADMIN变量。
+(三)Toad的使用：
+（1）建立新目录：
+在C:\OracleInstantClient_11_2下建立network\admin目录。
+（2）在network\admin目录下建立tnsnames.ora文件（或者拷贝一个），该文件配置了你要连接的数据库；
+（3）建立环境变量：
+TNS_ADMIN=C:\OracleInstantClient_11_2\network\admin（必须）
+PATH=%PATH%;C:\OracleInstantClient_11_2（必须）
+ORACLE_HOME=C:\OracleInstantClient_11_2（必须）
+LD_LIBRARY_PATH=C:\OracleInstantClient_11_2（必须）
+SQLPATH=C:\OracleInstantClient_11_2（可选）
+NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK（可选）
+（四）Oracle SQL Developer的使用：
+其实，Oracle SQL Developer不需要事先安装Oracle客户端的，但是参照（三）中的配置后，可以使用tnsnames.ora文件简化连接配置。Oracle SQL Developer中右键点击“连接”-> 新建连接 -> 将连接类型选择“TNS”，然后在网络别名中选择要连接的数据库即可，网络别名中列出的就是从tnsnames.ora文件中读取的。
+【总结】
+按照（三）中的配置，比较规范，这样instant client自带的sqlplus、PL/SQL Developer、TOAD、Oracle SQL Developer都可以正常使用了。
